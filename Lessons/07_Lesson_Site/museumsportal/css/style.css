@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Gentona";
+  src: url(fonts.css);
+}
+
+.site-footer {
+    background-color: #f0f0f0; 
+    color: #333;
+    font-size: 14px;
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  /* ========== */
+  .footer-top {
+    width: 100%;
+    padding: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  /* ========== */
+  .footer-column {
+    min-width: 150px;  
+    margin: 10px 0;
+  }
+  
+  /* Links */
+  .footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Social */
+  .footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+  }
+  
+  .footer-socials a img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .newsletter-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .newsletter-button img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .footer-bottom {
+    padding: 0px 50px 50px;
+  }
+  
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-project,
+  .footer-partners {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .footer-project img,
+  .footer-partners img{
+    max-height: 48px;
+    width: auto;
+    height: auto;
+  }
+
+  .footer-project p {
+    color: #6a6a6a;
+  }
+  
