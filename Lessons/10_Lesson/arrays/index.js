@@ -12,75 +12,93 @@ const animals = new Array(); // пустой массив
 const plants = new Array("Camomile", "Dandelion", "Basil");
 console.log(plants);
 
-// получить из массива элемент по индексу
+// получить из массива элемент по индексу - индексация с 0
 const firstTeacher = teachers[0];
 console.log(firstTeacher);
 
-console.log(teachers[10]);
+console.log(teachers[10]); // undefined
 
-//
-console.log(teachers.at(-2));
+// еще один способ получить элемент по индексу
+const secondTeacher = teachers.at(1);
+console.log(secondTeacher);
 
-//
+const negativeTeache = teachers.at(-2);
+console.log(negativeTeache); // Alisher
+
+console.log(plants); // [ 'Camomile', 'Dandelion', 'Basil' ]
+// хочу добавить четвертый элемент
 plants[3] = "Oak";
 
-console.log(plants);
+console.log(plants); // [ 'Camomile', 'Dandelion', 'Basil', 'Oak' ]
+// динамический массив - его длина может увеличиваться
+// массив больше похож лист из java
 
-// элемент в конец массива
+// а значит
+// push - добавляет элемент в конец массива
 plants.push("Cactus");
-console.log(plants);
+console.log(plants); // [ 'Camomile', 'Dandelion', 'Basil', 'Oak', 'Cactus' ]
 
 // хочу перезаписать последний элемент
 console.log(plants.length); // 5
 plants[plants.length - 1] = "Rose";
-console.log(plants);
+console.log(plants); // [ 'Camomile', 'Dandelion', 'Basil', 'Oak', 'Rose' ]
 
+// забирает последний элемент массива и возвращает его
+// мы сохранили этот элемент в отдельную переменную
 const rose = plants.pop();
-console.log(plants);
-console.log(rose);
+console.log(plants); // [ 'Camomile', 'Dandelion', 'Basil', 'Oak' ]
+console.log(rose); // "Rose"
 
-//
+// [9, "asdas", true] // tuple
+
+// Напишите метод, который принимает три параметра
+// возраст
+// имя
+// цвет волос
+// пусть метод возвращает новый массив с этой информацией
+// Пример: 31, "Alisher", "brown"  ---> [31, "Alisher", "brown"]
+// назовите метод createPersonalInfo
 
 function createPersonalInfo(age, name, hairColor) {
-  const personalInfo = new Array(age, name, hairColor);
-  console.log(personalInfo);
+  [age, name, hairColor];
 }
-createPersonalInfo(22, "Nik", "brown");
 
-function createPersonalInfo(age, name, hairColor) {
-  return [age, name, hairColor];
-}
-const info = createPersonalInfo(22, "Nik", "brown");
-console.log(info);
+// shift - забирает элемент в начале, unshift - добавляет элемент в начало
 
-
-// shift , unshift -  забирает/ добавляет элемент в начале
-
-const cars = ["BMW"];
+const cars = ["BMW"]; // [ 'BMW' ]
 cars.unshift("Mercedes"); // добавили элемент в начало массива
-console.log(cars);
+console.log(cars); // [ 'Mercedes', 'BMW' ]
 
+// как забрать элемент из начала
 const mercedes = cars.shift();
-console.log(cars);
+
+// О сложных местах
+// Почему мы сохранили в константу и изменения массива не вызвало проблемы
 
 const cities = ["Berlin"];
 const cities2 = cities;
 
 cities.push("London");
 
-console.log(cities2);
+console.log(cities2); // ["Berlin", "London"]
 
-// копия массива не зависящая от первого
+cities2.push("Milan");
+
+console.log(cities); // [ 'Berlin', 'London', 'Milan' ]
+
+// Вопрос: как нам сделать копию значений массива, чтобы он был независимым от первого массива
+
 const newCities = [...cities]; // spread оператор
 
 newCities.push("Hamburg");
 
-console.log(cities);
-console.log(newCities);
+console.log(cities); // [ 'Berlin', 'London', 'Milan' ]
+console.log(newCities); // [ 'Berlin', 'London', 'Milan', 'Hamburg' ]
 
-// массив из двх других
-const array1 = ["a","b", "c"];
-const array2 = ["e","f", "g"];
+// как мы можем создать массив из двух других
+const array1 = ["a", "b", "c"];
+const array2 = ["e", "f", "g"];
 
 const alphabet = [...array1, ...array2];
-console.log(alphabet);
+console.log(alphabet);  // [ 'a', 'b', 'c', 'e', 'f', 'g' ]
+
