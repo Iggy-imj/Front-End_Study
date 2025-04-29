@@ -24,8 +24,11 @@ function weatherDescription(weatherCode) {
     case "SS":
         console.log("песчаная буря (видимость менее 10 км)");
         break;
+    // default:
+    //     console.log("не корректные данные");
   }
 }
 
 weatherDescription("FC");
 weatherDescription("SS");
+weatherDescription("ASD");
