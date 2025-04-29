@@ -1,3 +1,5 @@
+// task_01
+
 function swapFirstLast(array) {
   const newArray = [...array];
 
@@ -15,7 +17,7 @@ console.log("modified: ", modified);
 
 console.log("\n=============\n");
 
-
+// task_02
 
 function capitalizeFirstElement(array) {
     array[0] = array[0].at(0).toUpperCase() + array[0].slice(1); 
