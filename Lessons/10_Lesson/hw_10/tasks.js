@@ -17,7 +17,7 @@ console.log("modified: ", modified);
 
 console.log("\n=============\n");
 
-// task_02
+// task_2
 
 function capitalizeFirstElement(array) {
     array[0] = array[0].at(0).toUpperCase() + array[0].slice(1); 
